@@ -24,19 +24,21 @@ Suma		Apariciones
 let aparicionesSumas = []
 
 for(let i = 0; i < 50; i++){
-  let numAleatorio = Math.floor(Math.random() * 6) + 1
+  let numAleatorio1 = Math.floor(Math.random() * 6) + 1
   let numAleatorio2 = Math.floor(Math.random() * 6) + 1
-  let suma = numAleatorio + numAleatorio2
+  let suma = numAleatorio1 + numAleatorio2
   aparicionesSumas.push(suma)
 }
 
 document.write(`
+<h2>Apariciones de una suma al arrojar dos dados:</h2>
 <table>
   <tr>
     <th>Suma</th>
     <th>Apariciones</th>
   </tr>
 `)
+
 for(let i = 0; i < 11; i++){
   let suma = aparicionesSumas.filter(x => x === i + 2).length
   document.write(`<tr>`)
@@ -45,5 +47,4 @@ for(let i = 0; i < 11; i++){
   document.write(`</tr>`)
 }
 
-console.log(aparicionesSumas.length);
 document.write(`</table>`)
