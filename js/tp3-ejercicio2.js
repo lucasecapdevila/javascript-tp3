@@ -43,6 +43,7 @@ do {
   ciudades.push(ciudadesUser)
 } while (confirm('¿Desea agregar otra ciudad?'));
 
+document.write(`<h2>Arreglo de ciudades:</h2>`)
 document.write(`<ul>`)
 document.write(`<li>El arreglo de ciudades tiene ${ciudades.length} elementos.</li>`)
 document.write(`<li>Elemento 1er posicion: ${ciudades[0]}.</li>`)
