@@ -6,14 +6,16 @@ y devuelve como resultado una cadena de texto que indica si el número es par o 
 Mostrar por pantalla el resultado devuelto por la función.
 */
 
-const num = parseInt(prompt('Ingrese un número'))
+const numUsuario = parseInt(prompt('Ingrese un número'))
 
 const numero = (num) => {
-  if(num%2 === 0){
+  if(isNaN(numUsuario)){
+    document.write('Debe ingresar un valor válido.')
+  } else if(num%2 === 0){
     document.write(`El número ${num} es par`)
   } else{
     document.write(`El número ${num} es impar`)
-  }
+  }  
 }
 
-numero(num)
+numero(numUsuario)
